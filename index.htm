@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.7.11/dist/vue.js"></script>
+</head>
+
+<body>
+    <div id = "app" class ="container">
+        <h1>ステップ１</h1>
+        <p>acidemia? or alkalemia?</p>
+        <input v-model = ”number” placeholder = "phの数値を入力">
+            
+
+    </div>
+
+    <script>
+
+        if(ph<7.40){
+           console.log(acidemia)
+        }else if(ph>7.41){
+            console.log(alkalemia)
+        }
+            
+    </script>
+    
+</body>
+</html>
