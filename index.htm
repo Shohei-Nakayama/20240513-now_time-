@@ -4,27 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <title>20240515</title>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.7.11/dist/vue.js"></script>
 </head>
 
 <body>
+
     <div id = "app" class ="container">
         <h1>ステップ１</h1>
         <p>acidemia? or alkalemia?</p>
-        <input v-model = ”number” placeholder = "phの数値を入力">
+        <p>下の欄にphの数値を入力</p>
+
+        <input v-model.number="ph" type= "number" style="text-align: center" step="0.01">
+            <div v-if= "ph<7.40" class="acidemia">acidemia</div>
+            <div v-if= "ph>7.40" class="alkalemia">alkalemia</div>
             
 
     </div>
 
     <script>
 
-        if(ph<7.40){
-           console.log(acidemia)
-        }else if(ph>7.41){
-            console.log(alkalemia)
-        }
-            
+        var app = new Vue({
+        el:'#app',
+        data:{
+             ph:"number"
+            }
+
+        })
+        
+
     </script>
     
 </body>
